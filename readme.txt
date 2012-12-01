@@ -5,8 +5,8 @@ Author URI: http://gopi.coolpage.biz/demo/about/
 Plugin URI: http://www.gopiplus.com/work/2010/10/10/superb-slideshow-gallery/
 Tags: Superb, slideshow, gallery, widget
 Requires at least: 3.0
-Tested up to: 3.4.2
-Stable tag: 10.1
+Tested up to: 3.5
+Stable tag: 10.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 	
@@ -79,6 +79,12 @@ Tags: Superb, slideshow, slide show, gallery, widget, translucent, translucent i
 
 == Changelog ==
 
+= 10.2 =
+
+Tested up to WordPress 3.5
+Avoid registering the alternate jQuery.
+From this version we are using existing wordpress jQuery.
+
 = 10.1 =
 
 Tested up to 3.4.2
@@ -128,6 +134,12 @@ Peek-a-boo Option for description.
 First version
 
 == Upgrade Notice ==
+
+= 10.2 =
+
+Tested up to WordPress 3.5
+Avoid registering the alternate jQuery.
+From this version we are using existing wordpress jQuery.
 
 = 10.1 =
 

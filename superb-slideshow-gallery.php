@@ -5,7 +5,7 @@ Plugin Name: Superb slideshow gallery
 Plugin URI: http://www.gopiplus.com/work/2010/10/10/superb-slideshow-gallery/
 Description: is a strong cross browser fade in slideshow script that incorporates some of your most requested features all rolled into one. Each instance of a fade in slideshow on the page is completely independent of the other, with support for different features selectively enabled for each slide show.  
 Author: Gopi.R
-Version: 10.1
+Version: 10.2
 Author URI: http://www.gopiplus.com/work/2010/10/10/superb-slideshow-gallery/
 Donate link: http://www.gopiplus.com/work/2010/10/10/superb-slideshow-gallery/
 License: GPLv2 or later
@@ -152,10 +152,10 @@ function ssg_install()
 		$sSql = $sSql . ")";
 		$wpdb->query($sSql);
 		$sSql = "INSERT INTO `". WP_ssg_TABLE . "` (`ssg_path`, `ssg_link`, `ssg_target` , `ssg_title` , `ssg_order` , `ssg_status` , `ssg_type` , `ssg_date`)"; 
-		$sSql = $sSql . "VALUES ('".get_option('siteurl')."/wp-content/plugins/superb-slideshow-gallery/images/250x167_1.jpg','#','_parent','No title','1', 'YES', 'page', '0000-00-00 00:00:00');";
+		$sSql = $sSql . "VALUES ('".get_option('siteurl')."/wp-content/plugins/superb-slideshow-gallery/images/250x167_1.jpg','#','_parent','No title','1', 'YES', 'pageimage', '0000-00-00 00:00:00');";
 		$wpdb->query($sSql);
 		$sSql = "INSERT INTO `". WP_ssg_TABLE . "` (`ssg_path`, `ssg_link`, `ssg_target` , `ssg_title` , `ssg_order` , `ssg_status` , `ssg_type` , `ssg_date`)"; 
-		$sSql = $sSql . "VALUES ('".get_option('siteurl')."/wp-content/plugins/superb-slideshow-gallery/images/250x167_2.jpg','#','_parent','No title','2', 'YES', 'page', '0000-00-00 00:00:00');";
+		$sSql = $sSql . "VALUES ('".get_option('siteurl')."/wp-content/plugins/superb-slideshow-gallery/images/250x167_2.jpg','#','_parent','No title','2', 'YES', 'pageimage', '0000-00-00 00:00:00');";
 		$wpdb->query($sSql);
 		$sSql = "INSERT INTO `". WP_ssg_TABLE . "` (`ssg_path`, `ssg_link`, `ssg_target` , `ssg_title` , `ssg_order` , `ssg_status` , `ssg_type` , `ssg_date`)"; 
 		$sSql = $sSql . "VALUES ('".get_option('siteurl')."/wp-content/plugins/superb-slideshow-gallery/images/250x167_3.jpg','#','_parent','No title','3', 'YES', 'widget', '0000-00-00 00:00:00');";
@@ -313,7 +313,7 @@ function ssg_add_javascript_files()
 {
 	if (!is_admin())
 	{
-		wp_enqueue_script( 'jquery.min', get_option('siteurl').'/wp-content/plugins/superb-slideshow-gallery/inc/jquery.min.js');
+		wp_enqueue_script('jquery');
 		wp_enqueue_script( 'superb-slideshow-gallery', get_option('siteurl').'/wp-content/plugins/superb-slideshow-gallery/inc/superb-slideshow-gallery.js');
 	}
 }    
