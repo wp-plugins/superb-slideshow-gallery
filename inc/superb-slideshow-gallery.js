@@ -245,7 +245,8 @@ SuperbSlideshowGallery.routines={
 			.css({position:'absolute', visibility:'hidden', width:'100%', left:0, top:setting.dimensions[1], font:SuperbSlideshowGallery_descpanel.fontStyle, zIndex:'1001'})
 			.appendTo(setting.$wrapperdiv)
 		$('<div class="descpanelbg"></div><div class="descpanelfg"></div>') //create inner nav panel DIVs
-			.css({position:'absolute', left:0, top:0, width:setting.$descpanel.width()-8, padding:'4px'})
+			//.css({position:'absolute', left:0, top:0, width:setting.$descpanel.width()-8, padding:'4px'}) Comented on version wp version 11.0 plugin
+			.css({position:'absolute', left:0, top:0, width:setting.$descpanel.width(), padding:'4px'})
 			.eq(0).css({background:'black', opacity:0.7}).end() //"descpanelbg" div
 			.eq(1).css({color:'white'}).html(setting.closebutton + setting.longestdesc).end() //"descpanelfg" div
 			.appendTo(setting.$descpanel)

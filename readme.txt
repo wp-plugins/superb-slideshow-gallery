@@ -4,9 +4,9 @@ Donate link: http://www.gopiplus.com/work/2010/10/10/superb-slideshow-gallery/
 Author URI: http://gopi.coolpage.biz/demo/about/
 Plugin URI: http://www.gopiplus.com/work/2010/10/10/superb-slideshow-gallery/
 Tags: Superb, slideshow, gallery, widget
-Requires at least: 3.0
-Tested up to: 3.5
-Stable tag: 10.2
+Requires at least: 3.4
+Tested up to: 3.6
+Stable tag: 11.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 	
@@ -21,12 +21,13 @@ Check official website for live demo [http://www.gopiplus.com/work/2010/10/10/su
 *   [Comments/Suggestion](http://www.gopiplus.com/work/2010/10/10/superb-slideshow-gallery/)		
 *   [About author](http://www.gopiplus.com/work/)			
 
-This is a strong, cross browser fade in slideshow script that incorporates some of your most requested features all rolled into one. Each instance of a fade in slideshow on the page is completely independent of the other, with support for different features selectively enabled for each slide show(This is the updated version of superb slide-show plug-in).
+Superb slideshow wordpress plugin is a strong cross browser fade in slideshow script that incorporates some of your most requested features all rolled into one. Each instance of a fade in slideshow on the page is completely independent of the other, with support for different features selectively enabled for each slide show (This is the updated version of superb slide-show plug-in). This plugin lets showcase your images with corresponding description. this is a ultimate fade in slideshow gallery.
 
 *   Superb fade in effect that has the current image fading over the previous one.
 *   Slide-show can be set to stop rotating after x cycles.
 *   Each slide can be optionally hyper linked.
-*   Each slide can have an optional description associated with it. Descriptions can either be set to show on demand (when the mouse rolls over the slide), or be always visible until explicitly dismissed.
+*   Each slide can have an optional description associated with it. 
+*   Descriptions can either be set to show on demand (when the mouse rolls over the slide), or be always visible until explicitly dismissed.
 *   Slide-show automatically pauses onMouseover.
 
 We can configure this plug-in in three different way.
@@ -78,6 +79,12 @@ Tags: Superb, slideshow, slide show, gallery, widget, translucent, translucent i
 2. Front end http://www.gopiplus.com/work/2010/10/10/superb-slideshow-gallery/
 
 == Changelog ==
+
+= 11.0 =
+
+Tested up to WordPress 3.6
+Added some security feature.
+New admin look.
 
 = 10.2 =
 
@@ -134,6 +141,12 @@ Peek-a-boo Option for description.
 First version
 
 == Upgrade Notice ==
+
+= 11.0 =
+
+Tested up to WordPress 3.6
+Added some security feature.
+New admin look.
 
 = 10.2 =
 

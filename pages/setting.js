@@ -74,14 +74,14 @@ function ssg_delete(id)
 {
 	if(confirm("Do you want to delete this record?"))
 	{
-		document.frm_ssg_display.action="options-general.php?page=superb-slideshow-gallery/image-management.php&AC=DEL&DID="+id;
+		document.frm_ssg_display.action="options-general.php?page=superb-slideshow-gallery&ac=del&did="+id;
 		document.frm_ssg_display.submit();
 	}
 }	
 
 function ssg_redirect()
 {
-	window.location = "options-general.php?page=superb-slideshow-gallery/image-management.php";
+	window.location = "options-general.php?page=superb-slideshow-gallery";
 }
 
 function ssg_help()
