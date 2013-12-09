@@ -5,8 +5,8 @@ Author URI: http://gopi.coolpage.biz/demo/about/
 Plugin URI: http://www.gopiplus.com/work/2010/10/10/superb-slideshow-gallery/
 Tags: Superb, slideshow, gallery, widget
 Requires at least: 3.4
-Tested up to: 3.6
-Stable tag: 11.0
+Tested up to: 3.8
+Stable tag: 11.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 	
@@ -29,6 +29,7 @@ Superb slideshow wordpress plugin is a strong cross browser fade in slideshow sc
 *   Each slide can have an optional description associated with it. 
 *   Descriptions can either be set to show on demand (when the mouse rolls over the slide), or be always visible until explicitly dismissed.
 *   Slide-show automatically pauses onMouseover.
+*   Supports localization
 
 We can configure this plug-in in three different way.
 
@@ -74,11 +75,18 @@ Tags: Superb, slideshow, slide show, gallery, widget, translucent, translucent i
 
 == Screenshots ==
 
-1. Admin image management http://www.gopiplus.com/work/2010/10/10/superb-slideshow-gallery/		
+1. http://www.gopiplus.com/work/2010/10/10/superb-slideshow-gallery/		
 
-2. Front end http://www.gopiplus.com/work/2010/10/10/superb-slideshow-gallery/
+2. http://www.gopiplus.com/work/2010/10/10/superb-slideshow-gallery/
 
 == Changelog ==
+
+= 11.1 =
+
+1. Tested up to 3.8
+2. Now this plugin supports localization (or internationalization). i.e. option to translate into other languages. 
+Plugin *.po file (ssg.po) available in the languages folder. Translators Welcome.
+3. Supports network multisite website (Manual table creation required).
 
 = 11.0 =
 
@@ -141,6 +149,13 @@ Peek-a-boo Option for description.
 First version
 
 == Upgrade Notice ==
+
+= 11.1 =
+
+1. Tested up to 3.8
+2. Now this plugin supports localization (or internationalization). i.e. option to translate into other languages. 
+Plugin *.po file (ssg.po) available in the languages folder. Translators Welcome.
+3. Supports network multisite website (Manual table creation required).
 
 = 11.0 =
 

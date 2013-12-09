@@ -2,8 +2,8 @@
   <div class="form-wrap">
     <div id="icon-edit" class="icon32 icon32-posts-post"><br>
     </div>
-    <h2><?php echo WP_ssg_TITLE; ?></h2>
-	<h3>Widget setting</h3>
+    <h2><?php _e('Superb slideshow gallery', 'ssg'); ?></h2>
+	<h3><?php _e('Widget setting', 'ssg'); ?></h3>
     <?php
 	$ssg_title = get_option('ssg_title');
 	$ssg_width = get_option('ssg_width');
@@ -16,7 +16,7 @@
 	$ssg_random = get_option('ssg_random');
 	$ssg_type = get_option('ssg_type');
 	
-	if (@$_POST['ssg_submit']) 
+	if (isset($_POST['ssg_submit'])) 
 	{
 		//	Just security thingy that wordpress offers us
 		check_admin_referer('ssg_form_setting');
@@ -45,56 +45,57 @@
 		
 		?>
 		<div class="updated fade">
-			<p><strong>Details successfully updated.</strong></p>
+			<p><strong><?php _e('Details successfully updated.', 'ssg'); ?></strong></p>
 		</div>
 		<?php
 	}
 	?>
-	<script language="JavaScript" src="<?php echo get_option('siteurl'); ?>/wp-content/plugins/superb-slideshow-gallery/pages/setting.js"></script>
+	<script language="JavaScript" src="<?php echo WP_SSG_PLUGIN_URL; ?>/pages/setting.js"></script>
     <form name="ssg_form" method="post" action="">
       
-	  <label for="tag-title">Enter widget title</label>
+	  <label for="tag-title"><?php _e('Enter widget title', 'ssg'); ?></label>
       <input name="ssg_title" id="ssg_title" type="text" value="<?php echo $ssg_title; ?>" size="80" />
-      <p>Enter widget title, Only for widget.</p>
+      <p><?php _e('Enter widget title, Only for widget.', 'ssg'); ?></p>
       
-	  <label for="tag-width">Width (Only number)</label>
+	  <label for="tag-width"><?php _e('Width (Only number)', 'ssg'); ?></label>
       <input name="ssg_width" id="ssg_width" type="text" value="<?php echo $ssg_width; ?>" />
-      <p>Widget Width (only number). (Example: 250)</p>
+      <p><?php _e('Widget Width (only number). (Example: 250)', 'ssg'); ?></p>
       
-	  <label for="tag-height">Height of each image</label>
+	  <label for="tag-height"><?php _e('Height of each image', 'ssg'); ?></label>
       <input name="ssg_height" id="ssg_height" type="text" value="<?php echo $ssg_height; ?>" />
-      <p>Widget Height (only number). (Example: 200)</p>
+      <p><?php _e('Widget Height (only number). (Example: 200)', 'ssg'); ?></p>
 	  
-	  <label for="tag-height">Pause</label>
+	  <label for="tag-height"><?php _e('Pause', 'ssg'); ?></label>
       <input name="ssg_pause" id="ssg_pause" type="text" value="<?php echo $ssg_pause; ?>" />
-      <p>Only Number / Pause time of the slideshow in milliseconds.</p>
+      <p><?php _e('Only Number / Pause time of the slideshow in milliseconds.', 'ssg'); ?></p>
 	  
-	  <label for="tag-height">Transduration</label>
+	  <label for="tag-height"><?php _e('Transduration', 'ssg'); ?></label>
       <input name="ssg_fadeduration" id="ssg_fadeduration" type="text" value="<?php echo $ssg_fadeduration; ?>" />
-      <p>Only Number / Duration of transition (affects only IE users)</p>
+      <p><?php _e('Only Number / Duration of transition (affects only IE users)', 'ssg'); ?></p>
 	  
-	  <label for="tag-height">Description option (For widget) </label>
+	  <label for="tag-height"><?php _e('Description option (For widget)', 'ssg'); ?></label>
       <input name="ssg_descreveal" id="ssg_descreveal" type="text" value="<?php echo $ssg_descreveal; ?>" />
-      <p>Enter : ondemand  (or) always  (or)  peek-a-boo</p>
+      <p><?php _e('Enter : ondemand  (or) always  (or)  peek-a-boo', 'ssg'); ?></p>
 	  
-	  <label for="tag-height">Description option (For post and pages) </label>
+	  <label for="tag-height"><?php _e('Description option (For post and pages)', 'ssg'); ?></label>
       <input name="ssg_descreveal1" id="ssg_descreveal1" type="text" value="<?php echo $ssg_descreveal1; ?>" />
-      <p>Enter : ondemand  (or) always  (or)  peek-a-boo</p>
+      <p><?php _e('Enter : ondemand  (or) always  (or)  peek-a-boo', 'ssg'); ?></p>
 	  
-	   <label for="tag-height">Cycles</label>
+	   <label for="tag-height"><?php _e('Cycles', 'ssg'); ?></label>
       <input name="ssg_cycles" id="ssg_cycles" type="text" value="<?php echo $ssg_cycles; ?>" />
-      <p>How many times do you want the gallery to cycle thru the pictures.</p>
+      <p><?php _e('How many times do you want the gallery to cycle thru the pictures.', 'ssg'); ?></p>
 	  
-	  <label for="tag-height">Random</label>
+	  <label for="tag-height"><?php _e('Random', 'ssg'); ?></label>
       <input name="ssg_random" id="ssg_random" type="text" value="<?php echo $ssg_random; ?>" />
-      <p>Enter : YES (or) NO</p>
+      <p><?php _e('Enter : YES (or) NO', 'ssg'); ?></p>
       
-	  <label for="tag-height">Select your gallery group (Gallery  Type)</label>
+	  <label for="tag-height"><?php _e('Select your gallery group (Type)', 'ssg'); ?></label>
 	  <select name="ssg_type" id="ssg_type">
 	 	<?php
 		$sSql = "SELECT distinct(ssg_type) as ssg_type FROM `".WP_ssg_TABLE."` order by ssg_type, ssg_order";
 		$myDistinctData = array();
 		$arrDistinctDatas = array();
+		$selected = "";
 		$myDistinctData = $wpdb->get_results($sSql, ARRAY_A);
 		$i = 0;
 		foreach ($myDistinctData as $DistinctData)
@@ -115,13 +116,17 @@
 		}
 		?>
       </select>
-      <p>This field is to group the images. Select your group name to fetch the images for widget.</p>
+      <p><?php _e('This field is to group the images. Select your group name to fetch the images for widget.', 'ssg'); ?></p>
       <br />
-	  <input name="ssg_submit" id="ssg_submit" class="button-primary" value="Submit" type="submit" />
-	  <input name="publish" lang="publish" class="button-primary" onclick="ssg_redirect()" value="Cancel" type="button" />
-        <input name="Help" lang="publish" class="button-primary" onclick="ssg_help()" value="Help" type="button" />
+	  <input name="ssg_submit" id="ssg_submit" class="button-primary" value="<?php _e('Submit', 'ssg'); ?>" type="submit" />
+	  <input name="publish" lang="publish" class="button-primary" onclick="ssg_redirect()" value="<?php _e('Cancel', 'ssg'); ?>" type="button" />
+        <input name="Help" lang="publish" class="button-primary" onclick="ssg_help()" value="<?php _e('Help', 'ssg'); ?>" type="button" />
 	  <?php wp_nonce_field('ssg_form_setting'); ?>
     </form>
   </div>
-  <br /><p class="description"><?php echo WP_ssg_LINK; ?></p>
+  <br />
+<p class="description">
+	<?php _e('Check official website for more information', 'ssg'); ?>
+	<a target="_blank" href="<?php echo WP_SSG_FAV; ?>"><?php _e('click here', 'ssg'); ?></a>
+</p>
 </div>

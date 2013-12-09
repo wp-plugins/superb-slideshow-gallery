@@ -5,7 +5,7 @@ Plugin Name: Superb slideshow gallery
 Plugin URI: http://www.gopiplus.com/work/2010/10/10/superb-slideshow-gallery/
 Description: is a strong cross browser fade in slideshow script that incorporates some of your most requested features all rolled into one. Each instance of a fade in slideshow on the page is completely independent of the other, with support for different features selectively enabled for each slide show.  
 Author: Gopi.R
-Version: 11.0
+Version: 11.1
 Author URI: http://www.gopiplus.com/work/2010/10/10/superb-slideshow-gallery/
 Donate link: http://www.gopiplus.com/work/2010/10/10/superb-slideshow-gallery/
 License: GPLv2 or later
@@ -14,10 +14,19 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 global $wpdb, $wp_version;
 define("WP_ssg_TABLE", $wpdb->prefix . "ssg_superb_gallery");
-define("WP_ssg_UNIQUE_NAME", "ssg");
-define("WP_ssg_TITLE", "Superb slideshow gallery");
-define('WP_ssg_LINK', 'Check official website for more information <a target="_blank" href="http://www.gopiplus.com/work/2010/10/10/superb-slideshow-gallery/">click here</a>');
-define('WP_ssg_FAV', 'http://www.gopiplus.com/work/2010/10/10/superb-slideshow-gallery/');
+define('WP_SSG_FAV', 'http://www.gopiplus.com/work/2010/10/10/superb-slideshow-gallery/');
+
+if ( ! defined( 'WP_SSG_BASENAME' ) )
+	define( 'WP_SSG_BASENAME', plugin_basename( __FILE__ ) );
+	
+if ( ! defined( 'WP_SSG_PLUGIN_NAME' ) )
+	define( 'WP_SSG_PLUGIN_NAME', trim( dirname( WP_SSG_BASENAME ), '/' ) );
+	
+if ( ! defined( 'WP_SSG_PLUGIN_URL' ) )
+	define( 'WP_SSG_PLUGIN_URL', WP_PLUGIN_URL . '/' . WP_SSG_PLUGIN_NAME );
+	
+if ( ! defined( 'WP_SSG_ADMIN_URL' ) )
+	define( 'WP_SSG_ADMIN_URL', get_option('siteurl') . '/wp-admin/options-general.php?page=superb-slideshow-gallery' );
 
 function ssg_show() 
 {
@@ -32,11 +41,11 @@ function ssg_show()
 	$ssg_random = get_option('ssg_random');
 	$ssg_type = get_option('ssg_type');
 	
-	if(!is_numeric(@$ssg_width)) {	@$ssg_width = 250;	} 
-	if(!is_numeric(@$ssg_height)) {	@$ssg_height = 200;	}
-	if(!is_numeric(@$ssg_pause)) {	@$ssg_pause = 2500;	}
-	if(!is_numeric(@$ssg_fadeduration)) { @$ssg_fadeduration = 500; }
-	if(!is_numeric(@$ssg_cycles)) {	@$ssg_cycles = 0;	}
+	if(!is_numeric($ssg_width)) {	$ssg_width = 250;	} 
+	if(!is_numeric($ssg_height)) {	$ssg_height = 200;	}
+	if(!is_numeric($ssg_pause)) {	$ssg_pause = 2500;	}
+	if(!is_numeric($ssg_fadeduration)) { $ssg_fadeduration = 500; }
+	if(!is_numeric($ssg_cycles)) {	$ssg_cycles = 0;	}
 	
 	$sSql = "select ssg_path,ssg_link,ssg_target,ssg_title from ".WP_ssg_TABLE." where 1=1";
 	$sSql = $sSql . " and ssg_type='".$ssg_type."'";
@@ -53,22 +62,22 @@ function ssg_show()
 		?>
 		<script type="text/javascript">
 		var mygallery=new SuperbSlideshowGallery ({
-		wrapperid: "fadeshow1", //ID of blank DIV on page to house Slideshow
-		dimensions: [<?php echo $ssg_width; ?>, <?php echo $ssg_height; ?>], //width/height of gallery in pixels. Should reflect dimensions of largest image
+		wrapperid: "fadeshow1",
+		dimensions: [<?php echo $ssg_width; ?>, <?php echo $ssg_height; ?>],
 		imagearray: [ <?php echo $ssg_package; ?> ],
 		displaymode: {type:'auto', pause:<?php echo $ssg_pause; ?>, cycles:<?php echo $ssg_cycles; ?>, wraparound:false},
-		persist: false, //remember last viewed slide and recall within same session?
-		fadeduration: <?php echo $ssg_fadeduration; ?>, //transition duration (milliseconds)
+		persist: false,
+		fadeduration: <?php echo $ssg_fadeduration; ?>,
 		descreveal: "<?php echo $ssg_descreveal; ?>",
 		togglerid: ""
 		})
 		</script>
-		<div id="fadeshow1"></div>
+		<div id="fadeshow1" style="max-width:100%"></div>
 		<?php
 	}
 	else
 	{
-		echo "No records available for the type : " . $ssg_type;
+		_e('No records available for the type', 'ssg') . $ssg_type;
 	}
 }
 
@@ -97,11 +106,11 @@ function ssg_shortcode($atts)
 	//list($ssg_type, $ssg_width, $ssg_height, $ssg_pause, $ssg_fadeduration, $ssg_cycles, $ssg_random) = split('[=.-]', $var);
 	
 	if($ssg_type==""){$ssg_type = "widget";}
-	if(!is_numeric(@$ssg_width)) {	@$ssg_width = 250;	} 
-	if(!is_numeric(@$ssg_height)) {	@$ssg_height = 200;	}
-	if(!is_numeric(@$ssg_pause)) {	@$ssg_pause = 2500;	}
-	if(!is_numeric(@$ssg_fadeduration)) { @$ssg_fadeduration = 500; }
-	if(!is_numeric(@$ssg_cycles)) {	@$ssg_cycles = 0; }
+	if(!is_numeric($ssg_width)) {	$ssg_width = 250;	} 
+	if(!is_numeric($ssg_height)) {	$ssg_height = 200;	}
+	if(!is_numeric($ssg_pause)) {	$ssg_pause = 2500;	}
+	if(!is_numeric($ssg_fadeduration)) { $ssg_fadeduration = 500; }
+	if(!is_numeric($ssg_cycles)) {	$ssg_cycles = 0; }
 	
 	$ssg_descreveal = get_option('ssg_descreveal1');
 	if( $ssg_descreveal == "")
@@ -113,26 +122,24 @@ function ssg_shortcode($atts)
 	$sSql = $sSql . " and ssg_type='".$ssg_type."'";
 	if($ssg_random == "YES"){ $sSql = $sSql . " ORDER BY RAND()"; }else{ $sSql = $sSql . " ORDER BY ssg_order"; }
 	$data = $wpdb->get_results($sSql);
+
 	if ( ! empty($data) ) 
 	{
 		foreach ( $data as $data ) 
 		{
 			$ssg_package = $ssg_package .'["'.$data->ssg_path.'", "'.$data->ssg_link.'", "'.$data->ssg_target.'", "'.$data->ssg_title.'"],';
 		}
-		
 		$ssg_package = substr($ssg_package,0,(strlen($ssg_package)-1));
 		$newwrapperid = $ssg_type;
-		$type = "auto";
-		$ssg_pluginurl = get_option('siteurl') . "/wp-content/plugins/superb-slideshow-gallery/";
-		
+		$type = "auto";		
 		$ssg_xml = $ssg_xml .'<script type="text/javascript">';
 		$ssg_xml = $ssg_xml .'var mygallery=new SuperbSlideshowGallery({wrapperid: "'.$newwrapperid.'", dimensions: ['.$ssg_width.', '.$ssg_height.'], imagearray: [ '.$ssg_package.' ],displaymode: {type:"'.$type.'", pause:'.$ssg_pause.', cycles:'.$ssg_cycles.', wraparound:false},	persist: false, fadeduration: '.$ssg_fadeduration.', descreveal: "'.$ssg_descreveal.'",togglerid: ""})';
 		$ssg_xml = $ssg_xml .'</script>';
-		$ssg_xml = $ssg_xml .'<div id="'.$newwrapperid.'"></div>';
+		$ssg_xml = $ssg_xml .'<div id="'.$newwrapperid.'" style="max-width:100%"></div>';
 	}
 	else
 	{
-		$ssg_xml = "No records found, please check your short code";
+		$ssg_xml = __( 'No records found, please check your short code' , 'ssg');
 	}
 	return $ssg_xml;
 }
@@ -153,19 +160,19 @@ function ssg_install()
 		$sSql = $sSql . "`ssg_type` VARCHAR( 100 ) NOT NULL ,";
 		$sSql = $sSql . "`ssg_date` INT NOT NULL ,";
 		$sSql = $sSql . "PRIMARY KEY ( `ssg_id` )";
-		$sSql = $sSql . ")";
+		$sSql = $sSql . ") ENGINE=MyISAM  DEFAULT CHARSET=utf8;";
 		$wpdb->query($sSql);
-		$sSql = "INSERT INTO `". WP_ssg_TABLE . "` (`ssg_path`, `ssg_link`, `ssg_target` , `ssg_title` , `ssg_order` , `ssg_status` , `ssg_type` , `ssg_date`)"; 
-		$sSql = $sSql . "VALUES ('".get_option('siteurl')."/wp-content/plugins/superb-slideshow-gallery/images/250x167_1.jpg','#','_parent','No title','1', 'YES', 'SAMPLE', '0000-00-00 00:00:00');";
+		$sSql = "INSERT INTO `". WP_ssg_TABLE . "` (ssg_path, ssg_link, ssg_target, ssg_title, ssg_order, ssg_status, ssg_type, ssg_date)"; 
+		$sSql = $sSql . "VALUES ('".WP_SSG_PLUGIN_URL."/images/250x167_1.jpg','#','_parent','No title','1', 'YES', 'SAMPLE', '0000-00-00 00:00:00');";
 		$wpdb->query($sSql);
-		$sSql = "INSERT INTO `". WP_ssg_TABLE . "` (`ssg_path`, `ssg_link`, `ssg_target` , `ssg_title` , `ssg_order` , `ssg_status` , `ssg_type` , `ssg_date`)"; 
-		$sSql = $sSql . "VALUES ('".get_option('siteurl')."/wp-content/plugins/superb-slideshow-gallery/images/250x167_2.jpg','#','_parent','No title','2', 'YES', 'SAMPLE', '0000-00-00 00:00:00');";
+		$sSql = "INSERT INTO `". WP_ssg_TABLE . "` (ssg_path, ssg_link, ssg_target, ssg_title, ssg_order, ssg_status, ssg_type, ssg_date)"; 
+		$sSql = $sSql . "VALUES ('".WP_SSG_PLUGIN_URL."/images/250x167_2.jpg','#','_parent','No title','2', 'YES', 'SAMPLE', '0000-00-00 00:00:00');";
 		$wpdb->query($sSql);
-		$sSql = "INSERT INTO `". WP_ssg_TABLE . "` (`ssg_path`, `ssg_link`, `ssg_target` , `ssg_title` , `ssg_order` , `ssg_status` , `ssg_type` , `ssg_date`)"; 
-		$sSql = $sSql . "VALUES ('".get_option('siteurl')."/wp-content/plugins/superb-slideshow-gallery/images/250x167_3.jpg','#','_parent','No title','3', 'YES', 'WIDGET', '0000-00-00 00:00:00');";
+		$sSql = "INSERT INTO `". WP_ssg_TABLE . "` (ssg_path, ssg_link, ssg_target, ssg_title, ssg_order, ssg_status, ssg_type, ssg_date)"; 
+		$sSql = $sSql . "VALUES ('".WP_SSG_PLUGIN_URL."/images/250x167_3.jpg','#','_parent','No title','3', 'YES', 'WIDGET', '0000-00-00 00:00:00');";
 		$wpdb->query($sSql);
-		$sSql = "INSERT INTO `". WP_ssg_TABLE . "` (`ssg_path`, `ssg_link`, `ssg_target` , `ssg_title` , `ssg_order` , `ssg_status` , `ssg_type` , `ssg_date`)"; 
-		$sSql = $sSql . "VALUES ('".get_option('siteurl')."/wp-content/plugins/superb-slideshow-gallery/images/250x167_4.jpg','#','_parent','No title','4', 'YES', 'WIDGET', '0000-00-00 00:00:00');";
+		$sSql = "INSERT INTO `". WP_ssg_TABLE . "` (ssg_path, ssg_link, ssg_target, ssg_title, ssg_order, ssg_status, ssg_type, ssg_date)"; 
+		$sSql = $sSql . "VALUES ('".WP_SSG_PLUGIN_URL."/images/250x167_4.jpg','#','_parent','No title','4', 'YES', 'WIDGET', '0000-00-00 00:00:00');";
 		$wpdb->query($sSql);
 	}
 	add_option('ssg_title', "superb gallery");
@@ -219,21 +226,23 @@ function ssg_admin_option()
 
 function ssg_control()
 {
-	echo '<p>To change the setting goto <b>superb slideshow gallery</b> link on Settings menu. ';
-	echo '<a href="options-general.php?page=superb-slideshow-gallery">click here</a></p>';
-	echo WP_ssg_LINK;
+	echo '<p><b>';
+	 _e('Superb slideshow gallery', 'ssg');
+	echo '.</b> ';
+	_e('Check official website for more information', 'ssg');
+	?> <a target="_blank" href="<?php echo WP_SSG_FAV; ?>"><?php _e('click here', 'ssg'); ?></a></p><?php
 }
 
 function ssg_widget_init() 
 {
 	if(function_exists('wp_register_sidebar_widget')) 	
 	{
-		wp_register_sidebar_widget('superb slideshow gallery', 'superb slideshow gallery', 'ssg_widget');
+		wp_register_sidebar_widget(__('Superb slideshow gallery', 'ssg'), __('Superb slideshow gallery', 'ssg'), 'ssg_widget');
 	}
 	
 	if(function_exists('wp_register_widget_control')) 	
 	{
-		wp_register_widget_control('superb slideshow gallery', array('superb slideshow gallery', 'widgets'), 'ssg_control');
+		wp_register_widget_control(__('Superb slideshow gallery', 'ssg'), array(__('Superb slideshow gallery', 'ssg'), 'widgets'), 'ssg_control');
 	} 
 }
 
@@ -246,8 +255,9 @@ function ssg_add_to_menu()
 {
 	if (is_admin()) 
 	{
-		add_options_page('Superb slideshow gallery','Superb slideshow gallery','manage_options','superb-slideshow-gallery','ssg_admin_option');  
-		//add_options_page('Superb slideshow gallery', '', 'manage_options', "superb-slideshow-gallery/image-management.php",'' );
+		add_options_page(__('Superb slideshow gallery', 'ssg'),
+							__('Superb slideshow gallery', 'ssg'),'manage_options',
+								'superb-slideshow-gallery','ssg_admin_option');  
 	}
 }
 
@@ -256,10 +266,16 @@ function ssg_add_javascript_files()
 	if (!is_admin())
 	{
 		wp_enqueue_script('jquery');
-		wp_enqueue_script( 'superb-slideshow-gallery', get_option('siteurl').'/wp-content/plugins/superb-slideshow-gallery/inc/superb-slideshow-gallery.js');
+		wp_enqueue_script( 'superb-slideshow-gallery', WP_SSG_PLUGIN_URL.'/inc/superb-slideshow-gallery.js');
 	}
 }    
- 
+
+function ssg_textdomain() 
+{
+	  load_plugin_textdomain( 'ssg', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
+}
+
+add_action('plugins_loaded', 'ssg_textdomain');
 add_action('wp_enqueue_scripts', 'ssg_add_javascript_files');
 add_action('admin_menu', 'ssg_add_to_menu');
 add_action("plugins_loaded", "ssg_widget_init");

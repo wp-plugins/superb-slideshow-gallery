@@ -1,6 +1,6 @@
 /**
  *     Superb slideshow gallery
- *     Copyright (C) 2011 - 2013 www.gopiplus.com
+ *     Copyright (C) 2011 - 2014 www.gopiplus.com
  *     http://www.gopiplus.com/work/2010/10/10/superb-slideshow-gallery/
  * 
  *     This program is free software: you can redistribute it and/or modify
@@ -146,8 +146,8 @@ SuperbSlideshowGallery.prototype={
 			: Math.min(keyword, totalimages-1)
 		var $slideimage=setting.$gallerylayers.eq(setting.bglayer).find('img').hide().eq(imgindex).show() //hide all images except current one
 		var imgdimensions=[$slideimage.width(), $slideimage.height()] //center align image
-		$slideimage.css({marginLeft: (imgdimensions[0]>0 && imgdimensions[0]<setting.dimensions[0])? setting.dimensions[0]/2-imgdimensions[0]/2 : 0})
-		$slideimage.css({marginTop: (imgdimensions[1]>0 && imgdimensions[1]<setting.dimensions[1])? setting.dimensions[1]/2-imgdimensions[1]/2 : 0})
+		//$slideimage.css({marginLeft: (imgdimensions[0]>0 && imgdimensions[0]<setting.dimensions[0])? setting.dimensions[0]/2-imgdimensions[0]/2 : 0})
+		//$slideimage.css({marginTop: (imgdimensions[1]>0 && imgdimensions[1]<setting.dimensions[1])? setting.dimensions[1]/2-imgdimensions[1]/2 : 0})
 		if (setting.descreveal=="peek-a-boo" && setting.longestdesc!=""){ //if descreveal is set to "peek-a-boo", make sure description panel is hidden before next slide is shown
 			clearTimeout(setting.hidedesctimer) //clear hide desc panel timer
 			slideshow.showhidedescpanel('hide', 0) //and hide it immediately
@@ -228,7 +228,7 @@ SuperbSlideshowGallery.routines={
 
 	getSlideHTML:function(imgelement){
 		var layerHTML=(imgelement[1])? '<a href="'+imgelement[1]+'" target="'+imgelement[2]+'">\n' : '' //hyperlink slide?
-		layerHTML+='<img src="'+imgelement[0]+'" style="border-width:0;" />\n'
+		layerHTML+='<img src="'+imgelement[0]+'" style="border-width:0;max-width:100%" />\n'
 		layerHTML+=(imgelement[1])? '</a>\n' : ''
 		return layerHTML //return HTML for this layer
 	},
