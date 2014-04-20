@@ -1,16 +1,17 @@
 <?php
-
 /*
 Plugin Name: Superb slideshow gallery
 Plugin URI: http://www.gopiplus.com/work/2010/10/10/superb-slideshow-gallery/
-Description: is a strong cross browser fade in slideshow script that incorporates some of your most requested features all rolled into one. Each instance of a fade in slideshow on the page is completely independent of the other, with support for different features selectively enabled for each slide show.  
-Author: Gopi.R
-Version: 11.1
+Description: Superb slideshow gallery is a strong cross browser fade in slideshow script that incorporates some of your most requested features all rolled into one. Each instance of a fade in slideshow on the page is completely independent of the other, with support for different features selectively enabled for each slide show.  
+Author: Gopi Ramasamy
+Version: 11.2
 Author URI: http://www.gopiplus.com/work/2010/10/10/superb-slideshow-gallery/
 Donate link: http://www.gopiplus.com/work/2010/10/10/superb-slideshow-gallery/
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 */
+
+if(preg_match('#' . basename(__FILE__) . '#', $_SERVER['PHP_SELF'])) { die('You are not allowed to call this page directly.'); }
 
 global $wpdb, $wp_version;
 define("WP_ssg_TABLE", $wpdb->prefix . "ssg_superb_gallery");

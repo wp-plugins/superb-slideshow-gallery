@@ -1,3 +1,4 @@
+<?php if(preg_match('#' . basename(__FILE__) . '#', $_SERVER['PHP_SELF'])) { die('You are not allowed to call this page directly.'); } ?>
 <?php
 // Form submitted, check the data
 if (isset($_POST['frm_ssg_display']) && $_POST['frm_ssg_display'] == 'yes')
@@ -61,10 +62,9 @@ if (isset($_POST['frm_ssg_display']) && $_POST['frm_ssg_display'] == 'yes')
         <thead>
           <tr>
             <th class="check-column" scope="row"><input type="checkbox" name="ssg_group_item[]" /></th>
-			<th scope="col"><?php _e('Type', 'ssg'); ?></th>
+			<th scope="col"><?php _e('Type/Group', 'ssg'); ?></th>
 			<th scope="col"><?php _e('Reference', 'ssg'); ?></th>
             <th scope="col"><?php _e('URL', 'ssg'); ?></th>
-			<th scope="col"><?php _e('Target', 'ssg'); ?></th>
             <th scope="col"><?php _e('Order', 'ssg'); ?></th>
             <th scope="col"><?php _e('Display', 'ssg'); ?></th>
           </tr>
@@ -72,10 +72,9 @@ if (isset($_POST['frm_ssg_display']) && $_POST['frm_ssg_display'] == 'yes')
 		<tfoot>
           <tr>
             <th class="check-column" scope="row"><input type="checkbox" name="ssg_group_item[]" /></th>
-			<th scope="col"><?php _e('Type', 'ssg'); ?></th>
+			<th scope="col"><?php _e('Type/Group', 'ssg'); ?></th>
 			<th scope="col"><?php _e('Reference', 'ssg'); ?></th>
             <th scope="col"><?php _e('URL', 'ssg'); ?></th>
-			<th scope="col"><?php _e('Target', 'ssg'); ?></th>
             <th scope="col"><?php _e('Order', 'ssg'); ?></th>
             <th scope="col"><?php _e('Display', 'ssg'); ?></th>
           </tr>
@@ -99,7 +98,6 @@ if (isset($_POST['frm_ssg_display']) && $_POST['frm_ssg_display'] == 'yes')
 					</td>
 					<td><?php echo esc_html(stripslashes($data['ssg_title'])); ?></td>
 					<td><a href="<?php echo esc_html(stripslashes($data['ssg_path'])); ?>" target="_blank"><?php echo esc_html(stripslashes($data['ssg_path'])); ?></a></td>
-					<td><?php echo esc_html(stripslashes($data['ssg_target'])); ?></td>
 					<td><?php echo esc_html(stripslashes($data['ssg_order'])); ?></td>
 					<td><?php echo esc_html(stripslashes($data['ssg_status'])); ?></td>
 				</tr>
