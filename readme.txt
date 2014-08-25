@@ -5,8 +5,8 @@ Author URI: http://gopi.coolpage.biz/demo/about/
 Plugin URI: http://www.gopiplus.com/work/2010/10/10/superb-slideshow-gallery/
 Tags: Superb, slideshow, gallery, widget
 Requires at least: 3.4
-Tested up to: 3.9
-Stable tag: 11.2
+Tested up to: 4.0
+Stable tag: 11.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 	
@@ -35,26 +35,17 @@ We can configure this plug-in in three different way.
 
 For more information check this link : http://www.gopiplus.com/work/2010/10/10/superb-slideshow-gallery/
 
-**1. Drag and drop the widget!**		
-**2. Copy and past the mentioned code to your desired template location.**		
-**3. Use below code in post or page.**			
+1. Drag and drop the widget.
 
-http://www.gopiplus.com/work/2010/10/10/superb-slideshow-gallery/
+2. Copy and past the mentioned code to your desired template location.
+
+3. Use below code in post or page.
 
 In the help page you can find the detailed information about short code. 		
 
-[More info](http://www.gopiplus.com/work/2010/10/10/superb-slideshow-gallery/)			
-
-See the live demo!	
-
-[Demo](http://www.gopiplus.com/work/2010/10/10/superb-slideshow-gallery/)		
-[To see my more plugin](http://www.gopiplus.com/work/plugin-list/)		
-
-Tags: Superb, slideshow, slide show, gallery, widget, translucent, translucent image, imagegallery
+[Help](http://www.gopiplus.com/work/2010/10/10/superb-slideshow-gallery/)			
 
 == Installation ==
-
-**Installation Instruction & Configuration**  
 
 [Installation Instruction](http://www.gopiplus.com/work/2010/10/10/superb-slideshow-gallery/)		
 [Configuration](http://www.gopiplus.com/work/2010/10/10/superb-slideshow-gallery/)	
@@ -71,7 +62,6 @@ Tags: Superb, slideshow, slide show, gallery, widget, translucent, translucent i
 6. loading, close, restore icon not display?		
 	
 [Answer page](http://www.gopiplus.com/work/2010/10/10/superb-slideshow-gallery/)			
-[Contact](http://www.gopiplus.com/work/2010/10/10/superb-slideshow-gallery/)	
 
 == Screenshots ==
 
@@ -80,6 +70,10 @@ Tags: Superb, slideshow, slide show, gallery, widget, translucent, translucent i
 2. Admin Page. http://www.gopiplus.com/work/2010/10/10/superb-slideshow-gallery/
 
 == Changelog ==
+
+= 11.3 =
+
+1. Tested up to 4.0
 
 = 11.2 =
 
@@ -154,6 +148,10 @@ Peek-a-boo Option for description.
 First version
 
 == Upgrade Notice ==
+
+= 11.3 =
+
+1. Tested up to 4.0
 
 = 11.2 =
 

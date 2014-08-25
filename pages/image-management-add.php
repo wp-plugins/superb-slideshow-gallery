@@ -92,10 +92,10 @@ if ($ssg_error_found == FALSE && strlen($ssg_success) > 0)
 	<form name="ssg_form" method="post" action="#" onsubmit="return ssg_submit()"  >
       <h3><?php _e('Add new image details', 'ssg'); ?></h3>
       <label for="tag-image"><?php _e('Enter image path (URL)', 'ssg'); ?></label>
-      <input name="ssg_path" type="text" id="ssg_path" value="" size="125" />
+      <input name="ssg_path" type="text" id="ssg_path" value="" size="90" />
       <p><?php _e('Where is the picture located on the internet', 'ssg'); ?> (ex: http://www.gopiplus.com/work/wp-content/uploads/pluginimages/250x167/250x167_2.jpg)</p>
       <label for="tag-link"><?php _e('Enter target link', 'ssg'); ?></label>
-      <input name="ssg_link" type="text" id="ssg_link" value="" size="125" />
+      <input name="ssg_link" type="text" id="ssg_link" value="" size="90" />
       <p><?php _e('When someone clicks on the picture, where do you want to send them', 'ssg'); ?></p>
       <label for="tag-target"><?php _e('Select target option', 'ssg'); ?></label>
       <select name="ssg_target" id="ssg_target">
@@ -106,7 +106,7 @@ if ($ssg_error_found == FALSE && strlen($ssg_success) > 0)
       </select>
       <p><?php _e('Do you want to open link in new window?', 'ssg'); ?></p>
       <label for="tag-title"><?php _e('Enter image reference', 'ssg'); ?></label>
-      <input name="ssg_title" type="text" id="ssg_title" value="" size="125" />
+      <input name="ssg_title" type="text" id="ssg_title" value="" size="90" />
       <p><?php _e('Enter image reference. This is only for reference.', 'ssg'); ?></p>
       <label for="tag-select-gallery-group"><?php _e('Select gallery type/group', 'ssg'); ?></label>
 		<select name="ssg_type" id="ssg_type">
