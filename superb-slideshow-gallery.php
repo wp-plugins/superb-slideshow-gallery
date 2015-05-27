@@ -4,7 +4,7 @@ Plugin Name: Superb slideshow gallery
 Plugin URI: http://www.gopiplus.com/work/2010/10/10/superb-slideshow-gallery/
 Description: Superb slideshow gallery is a strong cross browser fade in slideshow script that incorporates some of your most requested features all rolled into one. Each instance of a fade in slideshow on the page is completely independent of the other, with support for different features selectively enabled for each slide show.  
 Author: Gopi Ramasamy
-Version: 11.4
+Version: 11.5
 Author URI: http://www.gopiplus.com/work/2010/10/10/superb-slideshow-gallery/
 Donate link: http://www.gopiplus.com/work/2010/10/10/superb-slideshow-gallery/
 License: GPLv2 or later
