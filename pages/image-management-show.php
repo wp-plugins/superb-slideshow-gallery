@@ -4,6 +4,7 @@
 if (isset($_POST['frm_ssg_display']) && $_POST['frm_ssg_display'] == 'yes')
 {
 	$did = isset($_GET['did']) ? $_GET['did'] : '0';
+	if(!is_numeric($did)) { die('<p>Are you sure you want to do this?</p>'); }
 	
 	$ssg_success = '';
 	$ssg_success_msg = FALSE;
@@ -61,7 +62,7 @@ if (isset($_POST['frm_ssg_display']) && $_POST['frm_ssg_display'] == 'yes')
       <table width="100%" class="widefat" id="straymanage">
         <thead>
           <tr>
-            <th class="check-column" scope="row"><input type="checkbox" name="ssg_group_item[]" /></th>
+            <th class="check-column" scope="row" style="padding: 8px 2px;"><input type="checkbox" name="ssg_group_item[]" /></th>
 			<th scope="col"><?php _e('Type/Group', 'ssg'); ?></th>
 			<th scope="col"><?php _e('Reference', 'ssg'); ?></th>
             <th scope="col"><?php _e('URL', 'ssg'); ?></th>
@@ -71,7 +72,7 @@ if (isset($_POST['frm_ssg_display']) && $_POST['frm_ssg_display'] == 'yes')
         </thead>
 		<tfoot>
           <tr>
-            <th class="check-column" scope="row"><input type="checkbox" name="ssg_group_item[]" /></th>
+            <th class="check-column" scope="row" style="padding: 8px 2px;"><input type="checkbox" name="ssg_group_item[]" /></th>
 			<th scope="col"><?php _e('Type/Group', 'ssg'); ?></th>
 			<th scope="col"><?php _e('Reference', 'ssg'); ?></th>
             <th scope="col"><?php _e('URL', 'ssg'); ?></th>

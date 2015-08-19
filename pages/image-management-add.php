@@ -86,6 +86,32 @@ if ($ssg_error_found == FALSE && strlen($ssg_success) > 0)
 	}
 ?>
 <script language="JavaScript" src="<?php echo WP_SSG_PLUGIN_URL; ?>/pages/setting.js"></script>
+<script type="text/javascript">
+jQuery(document).ready(function($){
+    $('#upload-btn').click(function(e) {
+        e.preventDefault();
+        var image = wp.media({ 
+            title: 'Upload Image',
+            // mutiple: true if you want to upload multiple files at once
+            multiple: false
+        }).open()
+        .on('select', function(e){
+            // This will return the selected image from the Media Uploader, the result is an object
+            var uploaded_image = image.state().get('selection').first();
+            // We convert uploaded_image to a JSON object to make accessing it easier
+            // Output to the console uploaded_image
+            console.log(uploaded_image);
+            var img_imageurl = uploaded_image.toJSON().url;
+            // Let's assign the url value to the input field
+            $('#ssg_path').val(img_imageurl);
+        });
+    });
+});
+</script>
+<?php
+wp_enqueue_script('jquery'); // jQuery
+wp_enqueue_media(); // This will enqueue the Media Uploader script
+?>
 <div class="form-wrap">
 	<div id="icon-edit" class="icon32 icon32-posts-post"><br></div>
 	<h2><?php _e('Superb slideshow gallery', 'ssg'); ?></h2>
@@ -93,9 +119,10 @@ if ($ssg_error_found == FALSE && strlen($ssg_success) > 0)
       <h3><?php _e('Add new image details', 'ssg'); ?></h3>
       <label for="tag-image"><?php _e('Enter image path (URL)', 'ssg'); ?></label>
       <input name="ssg_path" type="text" id="ssg_path" value="" size="90" />
+	  <input type="button" name="upload-btn" id="upload-btn" class="button-secondary" value="Upload Image">
       <p><?php _e('Where is the picture located on the internet', 'ssg'); ?> (ex: http://www.gopiplus.com/work/wp-content/uploads/pluginimages/250x167/250x167_2.jpg)</p>
       <label for="tag-link"><?php _e('Enter target link', 'ssg'); ?></label>
-      <input name="ssg_link" type="text" id="ssg_link" value="" size="90" />
+      <input name="ssg_link" type="text" id="ssg_link" value="#" size="90" />
       <p><?php _e('When someone clicks on the picture, where do you want to send them', 'ssg'); ?></p>
       <label for="tag-target"><?php _e('Select target option', 'ssg'); ?></label>
       <select name="ssg_target" id="ssg_target">
@@ -143,7 +170,7 @@ if ($ssg_error_found == FALSE && strlen($ssg_success) > 0)
       </select>
       <p><?php _e('Do you want the picture to show in your galler?', 'ssg'); ?></p>
       <label for="tag-display-order"><?php _e('Display order', 'ssg'); ?></label>
-      <input name="ssg_order" type="text" id="ssg_order" size="10" value="" maxlength="3" />
+      <input name="ssg_order" type="text" id="ssg_order" size="10" value="0" maxlength="3" />
       <p><?php _e('What order should the picture be played in. should it come 1st, 2nd, 3rd, etc.', 'ssg'); ?></p>
       <input name="ssg_id" id="ssg_id" type="hidden" value="">
       <input type="hidden" name="ssg_form_submit" value="yes"/>

@@ -5,8 +5,8 @@ Author URI: http://gopi.coolpage.biz/demo/about/
 Plugin URI: http://www.gopiplus.com/work/2010/10/10/superb-slideshow-gallery/
 Tags: Superb, slideshow, gallery, widget
 Requires at least: 3.4
-Tested up to: 4.2.2
-Stable tag: 11.5
+Tested up to: 4.3
+Stable tag: 11.6
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 	
@@ -70,6 +70,11 @@ In the help page you can find the detailed information about short code.
 2. Admin Page. http://www.gopiplus.com/work/2010/10/10/superb-slideshow-gallery/
 
 == Changelog ==
+
+= 11.6 =
+
+1. Tested up to 4.3
+2. Image upload option is added in the plugin admin. With this option you can easily upload (or select from media) your images into this plugin.
 
 = 11.5 =
 
@@ -156,6 +161,11 @@ Peek-a-boo Option for description.
 First version
 
 == Upgrade Notice ==
+
+= 11.6 =
+
+1. Tested up to 4.3
+2. Image upload option is added in the plugin admin. With this option you can easily upload (or select from media) your images into this plugin.
 
 = 11.5 =
 
