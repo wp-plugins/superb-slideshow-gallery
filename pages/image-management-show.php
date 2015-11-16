@@ -20,7 +20,7 @@ if (isset($_POST['frm_ssg_display']) && $_POST['frm_ssg_display'] == 'yes')
 	
 	if ($result != '1')
 	{
-		?><div class="error fade"><p><strong><?php _e('Oops, selected details doesnt exist', 'ssg'); ?></strong></p></div><?php
+		?><div class="error fade"><p><strong><?php _e('Oops, selected details doesnt exist', 'superb-slideshow-gallery'); ?></strong></p></div><?php
 	}
 	else
 	{
@@ -38,7 +38,7 @@ if (isset($_POST['frm_ssg_display']) && $_POST['frm_ssg_display'] == 'yes')
 			
 			//	Set success message
 			$ssg_success_msg = TRUE;
-			$ssg_success = __('Selected record was successfully deleted.', 'ssg');
+			$ssg_success = __('Selected record was successfully deleted.', 'superb-slideshow-gallery');
 		}
 	}
 	
@@ -50,7 +50,7 @@ if (isset($_POST['frm_ssg_display']) && $_POST['frm_ssg_display'] == 'yes')
 ?>
 <div class="wrap">
   <div id="icon-edit" class="icon32 icon32-posts-post"></div>
-    <h2><?php _e('Superb slideshow gallery', 'ssg'); ?><a class="add-new-h2" href="<?php echo WP_SSG_ADMIN_URL; ?>&amp;ac=add"><?php _e('Add New', 'ssg'); ?></a></h2>
+    <h2><?php _e('Superb slideshow gallery', 'superb-slideshow-gallery'); ?><a class="add-new-h2" href="<?php echo WP_SSG_ADMIN_URL; ?>&amp;ac=add"><?php _e('Add New', 'superb-slideshow-gallery'); ?></a></h2>
     <div class="tool-box">
 	<?php
 		$sSql = "SELECT * FROM `".WP_ssg_TABLE."` order by ssg_type, ssg_order";
@@ -63,21 +63,21 @@ if (isset($_POST['frm_ssg_display']) && $_POST['frm_ssg_display'] == 'yes')
         <thead>
           <tr>
             <th class="check-column" scope="row" style="padding: 8px 2px;"><input type="checkbox" name="ssg_group_item[]" /></th>
-			<th scope="col"><?php _e('Type/Group', 'ssg'); ?></th>
-			<th scope="col"><?php _e('Reference', 'ssg'); ?></th>
-            <th scope="col"><?php _e('URL', 'ssg'); ?></th>
-            <th scope="col"><?php _e('Order', 'ssg'); ?></th>
-            <th scope="col"><?php _e('Display', 'ssg'); ?></th>
+			<th scope="col"><?php _e('Type/Group', 'superb-slideshow-gallery'); ?></th>
+			<th scope="col"><?php _e('Reference', 'superb-slideshow-gallery'); ?></th>
+            <th scope="col"><?php _e('URL', 'superb-slideshow-gallery'); ?></th>
+            <th scope="col"><?php _e('Order', 'superb-slideshow-gallery'); ?></th>
+            <th scope="col"><?php _e('Display', 'superb-slideshow-gallery'); ?></th>
           </tr>
         </thead>
 		<tfoot>
           <tr>
             <th class="check-column" scope="row" style="padding: 8px 2px;"><input type="checkbox" name="ssg_group_item[]" /></th>
-			<th scope="col"><?php _e('Type/Group', 'ssg'); ?></th>
-			<th scope="col"><?php _e('Reference', 'ssg'); ?></th>
-            <th scope="col"><?php _e('URL', 'ssg'); ?></th>
-            <th scope="col"><?php _e('Order', 'ssg'); ?></th>
-            <th scope="col"><?php _e('Display', 'ssg'); ?></th>
+			<th scope="col"><?php _e('Type/Group', 'superb-slideshow-gallery'); ?></th>
+			<th scope="col"><?php _e('Reference', 'superb-slideshow-gallery'); ?></th>
+            <th scope="col"><?php _e('URL', 'superb-slideshow-gallery'); ?></th>
+            <th scope="col"><?php _e('Order', 'superb-slideshow-gallery'); ?></th>
+            <th scope="col"><?php _e('Display', 'superb-slideshow-gallery'); ?></th>
           </tr>
         </tfoot>
 		<tbody>
@@ -93,8 +93,8 @@ if (isset($_POST['frm_ssg_display']) && $_POST['frm_ssg_display'] == 'yes')
 					<td>
 					<strong><?php echo esc_html(stripslashes($data['ssg_type'])); ?></strong>
 					<div class="row-actions">
-						<span class="edit"><a title="Edit" href="<?php echo WP_SSG_ADMIN_URL; ?>&ac=edit&amp;did=<?php echo $data['ssg_id']; ?>"><?php _e('Edit', 'ssg'); ?></a> | </span>
-						<span class="trash"><a onClick="javascript:ssg_delete('<?php echo $data['ssg_id']; ?>')" href="javascript:void(0);"><?php _e('Delete', 'ssg'); ?></a></span> 
+						<span class="edit"><a title="Edit" href="<?php echo WP_SSG_ADMIN_URL; ?>&ac=edit&amp;did=<?php echo $data['ssg_id']; ?>"><?php _e('Edit', 'superb-slideshow-gallery'); ?></a> | </span>
+						<span class="trash"><a onClick="javascript:ssg_delete('<?php echo $data['ssg_id']; ?>')" href="javascript:void(0);"><?php _e('Delete', 'superb-slideshow-gallery'); ?></a></span> 
 					</div>
 					</td>
 					<td><?php echo esc_html(stripslashes($data['ssg_title'])); ?></td>
@@ -108,7 +108,7 @@ if (isset($_POST['frm_ssg_display']) && $_POST['frm_ssg_display'] == 'yes')
 		}
 		else
 		{
-			?><tr><td colspan="6" align="center"><?php _e('No records available', 'ssg'); ?></td></tr><?php 
+			?><tr><td colspan="6" align="center"><?php _e('No records available', 'superb-slideshow-gallery'); ?></td></tr><?php 
 		}
 		?>
 		</tbody>
@@ -118,15 +118,15 @@ if (isset($_POST['frm_ssg_display']) && $_POST['frm_ssg_display'] == 'yes')
       </form>	
 	  <div class="tablenav">
 	  <h2>
-	  <a class="button add-new-h2" href="<?php echo WP_SSG_ADMIN_URL; ?>&amp;ac=add"><?php _e('Add New', 'ssg'); ?></a>
-	  <a class="button add-new-h2" href="<?php echo WP_SSG_ADMIN_URL; ?>&amp;ac=set"><?php _e('Widget setting', 'ssg'); ?></a>
-	  <a class="button add-new-h2" target="_blank" href="<?php echo WP_SSG_FAV; ?>"><?php _e('Help', 'ssg'); ?></a>
+	  <a class="button add-new-h2" href="<?php echo WP_SSG_ADMIN_URL; ?>&amp;ac=add"><?php _e('Add New', 'superb-slideshow-gallery'); ?></a>
+	  <a class="button add-new-h2" href="<?php echo WP_SSG_ADMIN_URL; ?>&amp;ac=set"><?php _e('Widget setting', 'superb-slideshow-gallery'); ?></a>
+	  <a class="button add-new-h2" target="_blank" href="<?php echo WP_SSG_FAV; ?>"><?php _e('Help', 'superb-slideshow-gallery'); ?></a>
 	  </h2>
 	  </div>
 	  <br />
 	  <p class="description">
-		<?php _e('Check official website for more information', 'ssg'); ?>
-		<a target="_blank" href="<?php echo WP_SSG_FAV; ?>"><?php _e('click here', 'ssg'); ?></a>
+		<?php _e('Check official website for more information', 'superb-slideshow-gallery'); ?>
+		<a target="_blank" href="<?php echo WP_SSG_FAV; ?>"><?php _e('click here', 'superb-slideshow-gallery'); ?></a>
 	  </p>
 	</div>
 </div>

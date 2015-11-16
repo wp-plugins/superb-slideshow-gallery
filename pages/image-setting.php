@@ -3,8 +3,8 @@
   <div class="form-wrap">
     <div id="icon-edit" class="icon32 icon32-posts-post"><br>
     </div>
-    <h2><?php _e('Superb slideshow gallery', 'ssg'); ?></h2>
-	<h3><?php _e('Widget setting', 'ssg'); ?></h3>
+    <h2><?php _e('Superb slideshow gallery', 'superb-slideshow-gallery'); ?></h2>
+	<h3><?php _e('Widget setting', 'superb-slideshow-gallery'); ?></h3>
     <?php
 	$ssg_title = get_option('ssg_title');
 	$ssg_width = get_option('ssg_width');
@@ -46,7 +46,7 @@
 		
 		?>
 		<div class="updated fade">
-			<p><strong><?php _e('Details successfully updated.', 'ssg'); ?></strong></p>
+			<p><strong><?php _e('Details successfully updated.', 'superb-slideshow-gallery'); ?></strong></p>
 		</div>
 		<?php
 	}
@@ -54,43 +54,43 @@
 	<script language="JavaScript" src="<?php echo WP_SSG_PLUGIN_URL; ?>/pages/setting.js"></script>
     <form name="ssg_form" method="post" action="">
       
-	  <label for="tag-title"><?php _e('Enter widget title', 'ssg'); ?></label>
+	  <label for="tag-title"><?php _e('Enter widget title', 'superb-slideshow-gallery'); ?></label>
       <input name="ssg_title" id="ssg_title" type="text" value="<?php echo $ssg_title; ?>" size="80" />
-      <p><?php _e('Enter widget title, Only for widget.', 'ssg'); ?></p>
+      <p><?php _e('Enter widget title, Only for widget.', 'superb-slideshow-gallery'); ?></p>
       
-	  <label for="tag-width"><?php _e('Width (Only number)', 'ssg'); ?></label>
+	  <label for="tag-width"><?php _e('Width (Only number)', 'superb-slideshow-gallery'); ?></label>
       <input name="ssg_width" id="ssg_width" type="text" value="<?php echo $ssg_width; ?>" />
-      <p><?php _e('Widget Width (only number). (Example: 250)', 'ssg'); ?></p>
+      <p><?php _e('Widget Width (only number). (Example: 250)', 'superb-slideshow-gallery'); ?></p>
       
-	  <label for="tag-height"><?php _e('Height of each image', 'ssg'); ?></label>
+	  <label for="tag-height"><?php _e('Height of each image', 'superb-slideshow-gallery'); ?></label>
       <input name="ssg_height" id="ssg_height" type="text" value="<?php echo $ssg_height; ?>" />
-      <p><?php _e('Widget Height (only number). (Example: 200)', 'ssg'); ?></p>
+      <p><?php _e('Widget Height (only number). (Example: 200)', 'superb-slideshow-gallery'); ?></p>
 	  
-	  <label for="tag-height"><?php _e('Pause', 'ssg'); ?></label>
+	  <label for="tag-height"><?php _e('Pause', 'superb-slideshow-gallery'); ?></label>
       <input name="ssg_pause" id="ssg_pause" type="text" value="<?php echo $ssg_pause; ?>" />
-      <p><?php _e('Only Number / Pause time of the slideshow in milliseconds.', 'ssg'); ?></p>
+      <p><?php _e('Only Number / Pause time of the slideshow in milliseconds.', 'superb-slideshow-gallery'); ?></p>
 	  
-	  <label for="tag-height"><?php _e('Transduration', 'ssg'); ?></label>
+	  <label for="tag-height"><?php _e('Transduration', 'superb-slideshow-gallery'); ?></label>
       <input name="ssg_fadeduration" id="ssg_fadeduration" type="text" value="<?php echo $ssg_fadeduration; ?>" />
-      <p><?php _e('Only Number / Duration of transition (affects only IE users)', 'ssg'); ?></p>
+      <p><?php _e('Only Number / Duration of transition (affects only IE users)', 'superb-slideshow-gallery'); ?></p>
 	  
-	  <label for="tag-height"><?php _e('Description option (For widget)', 'ssg'); ?></label>
+	  <label for="tag-height"><?php _e('Description option (For widget)', 'superb-slideshow-gallery'); ?></label>
       <input name="ssg_descreveal" id="ssg_descreveal" type="text" value="<?php echo $ssg_descreveal; ?>" />
-      <p><?php _e('Enter : ondemand  (or) always  (or)  peek-a-boo', 'ssg'); ?></p>
+      <p><?php _e('Enter : ondemand  (or) always  (or)  peek-a-boo', 'superb-slideshow-gallery'); ?></p>
 	  
-	  <label for="tag-height"><?php _e('Description option (For post and pages)', 'ssg'); ?></label>
+	  <label for="tag-height"><?php _e('Description option (For post and pages)', 'superb-slideshow-gallery'); ?></label>
       <input name="ssg_descreveal1" id="ssg_descreveal1" type="text" value="<?php echo $ssg_descreveal1; ?>" />
-      <p><?php _e('Enter : ondemand  (or) always  (or)  peek-a-boo', 'ssg'); ?></p>
+      <p><?php _e('Enter : ondemand  (or) always  (or)  peek-a-boo', 'superb-slideshow-gallery'); ?></p>
 	  
-	   <label for="tag-height"><?php _e('Cycles', 'ssg'); ?></label>
+	   <label for="tag-height"><?php _e('Cycles', 'superb-slideshow-gallery'); ?></label>
       <input name="ssg_cycles" id="ssg_cycles" type="text" value="<?php echo $ssg_cycles; ?>" />
-      <p><?php _e('How many times do you want the gallery to cycle thru the pictures.', 'ssg'); ?></p>
+      <p><?php _e('How many times do you want the gallery to cycle thru the pictures.', 'superb-slideshow-gallery'); ?></p>
 	  
-	  <label for="tag-height"><?php _e('Random', 'ssg'); ?></label>
+	  <label for="tag-height"><?php _e('Random', 'superb-slideshow-gallery'); ?></label>
       <input name="ssg_random" id="ssg_random" type="text" value="<?php echo $ssg_random; ?>" />
-      <p><?php _e('Enter : YES (or) NO', 'ssg'); ?></p>
+      <p><?php _e('Enter : YES (or) NO', 'superb-slideshow-gallery'); ?></p>
       
-	  <label for="tag-height"><?php _e('Select your gallery group (Type)', 'ssg'); ?></label>
+	  <label for="tag-height"><?php _e('Select your gallery group (Type)', 'superb-slideshow-gallery'); ?></label>
 	  <select name="ssg_type" id="ssg_type">
 	 	<?php
 		$sSql = "SELECT distinct(ssg_type) as ssg_type FROM `".WP_ssg_TABLE."` order by ssg_type, ssg_order";
@@ -117,17 +117,17 @@
 		}
 		?>
       </select>
-      <p><?php _e('This field is to group the images. Select your group name to fetch the images for widget.', 'ssg'); ?></p>
+      <p><?php _e('This field is to group the images. Select your group name to fetch the images for widget.', 'superb-slideshow-gallery'); ?></p>
       <br />
-	  <input name="ssg_submit" id="ssg_submit" class="button-primary" value="<?php _e('Submit', 'ssg'); ?>" type="submit" />
-	  <input name="publish" lang="publish" class="button-primary" onclick="ssg_redirect()" value="<?php _e('Cancel', 'ssg'); ?>" type="button" />
-        <input name="Help" lang="publish" class="button-primary" onclick="ssg_help()" value="<?php _e('Help', 'ssg'); ?>" type="button" />
+	  <input name="ssg_submit" id="ssg_submit" class="button-primary" value="<?php _e('Submit', 'superb-slideshow-gallery'); ?>" type="submit" />
+	  <input name="publish" lang="publish" class="button-primary" onclick="ssg_redirect()" value="<?php _e('Cancel', 'superb-slideshow-gallery'); ?>" type="button" />
+        <input name="Help" lang="publish" class="button-primary" onclick="ssg_help()" value="<?php _e('Help', 'superb-slideshow-gallery'); ?>" type="button" />
 	  <?php wp_nonce_field('ssg_form_setting'); ?>
     </form>
   </div>
   <br />
 <p class="description">
-	<?php _e('Check official website for more information', 'ssg'); ?>
-	<a target="_blank" href="<?php echo WP_SSG_FAV; ?>"><?php _e('click here', 'ssg'); ?></a>
+	<?php _e('Check official website for more information', 'superb-slideshow-gallery'); ?>
+	<a target="_blank" href="<?php echo WP_SSG_FAV; ?>"><?php _e('click here', 'superb-slideshow-gallery'); ?></a>
 </p>
 </div>

@@ -1,6 +1,6 @@
 /**
  *     Superb slideshow gallery
- *     Copyright (C) 2011 - 2014 www.gopiplus.com
+ *     Copyright (C) 2011 - 2015 www.gopiplus.com
  *     http://www.gopiplus.com/work/2010/10/10/superb-slideshow-gallery/
  * 
  *     This program is free software: you can redistribute it and/or modify
@@ -16,7 +16,6 @@
  *     You should have received a copy of the GNU General Public License
  *     along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-
 
 function ssg_submit()
 {

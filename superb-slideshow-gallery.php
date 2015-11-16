@@ -4,11 +4,13 @@ Plugin Name: Superb slideshow gallery
 Plugin URI: http://www.gopiplus.com/work/2010/10/10/superb-slideshow-gallery/
 Description: Superb slideshow gallery is a strong cross browser fade in slideshow script that incorporates some of your most requested features all rolled into one. Each instance of a fade in slideshow on the page is completely independent of the other, with support for different features selectively enabled for each slide show.  
 Author: Gopi Ramasamy
-Version: 11.6
+Version: 11.7
 Author URI: http://www.gopiplus.com/work/2010/10/10/superb-slideshow-gallery/
 Donate link: http://www.gopiplus.com/work/2010/10/10/superb-slideshow-gallery/
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: superb-slideshow-gallery
+Domain Path: /languages
 */
 
 if(preg_match('#' . basename(__FILE__) . '#', $_SERVER['PHP_SELF'])) { die('You are not allowed to call this page directly.'); }
@@ -78,7 +80,7 @@ function ssg_show()
 	}
 	else
 	{
-		_e('No records available for the type', 'ssg') . $ssg_type;
+		_e('No records available for the type', 'superb-slideshow-gallery') . $ssg_type;
 	}
 }
 
@@ -140,7 +142,7 @@ function ssg_shortcode($atts)
 	}
 	else
 	{
-		$ssg_xml = __( 'No records found, please check your short code' , 'ssg');
+		$ssg_xml = __( 'No records found, please check your short code' , 'superb-slideshow-gallery');
 	}
 	return $ssg_xml;
 }
@@ -228,22 +230,22 @@ function ssg_admin_option()
 function ssg_control()
 {
 	echo '<p><b>';
-	 _e('Superb slideshow gallery', 'ssg');
+	 _e('Superb slideshow gallery', 'superb-slideshow-gallery');
 	echo '.</b> ';
-	_e('Check official website for more information', 'ssg');
-	?> <a target="_blank" href="<?php echo WP_SSG_FAV; ?>"><?php _e('click here', 'ssg'); ?></a></p><?php
+	_e('Check official website for more information', 'superb-slideshow-gallery');
+	?> <a target="_blank" href="<?php echo WP_SSG_FAV; ?>"><?php _e('click here', 'superb-slideshow-gallery'); ?></a></p><?php
 }
 
 function ssg_widget_init() 
 {
 	if(function_exists('wp_register_sidebar_widget')) 	
 	{
-		wp_register_sidebar_widget(__('Superb slideshow gallery', 'ssg'), __('Superb slideshow gallery', 'ssg'), 'ssg_widget');
+		wp_register_sidebar_widget(__('Superb slideshow gallery', 'superb-slideshow-gallery'), __('Superb slideshow gallery', 'superb-slideshow-gallery'), 'ssg_widget');
 	}
 	
 	if(function_exists('wp_register_widget_control')) 	
 	{
-		wp_register_widget_control(__('Superb slideshow gallery', 'ssg'), array(__('Superb slideshow gallery', 'ssg'), 'widgets'), 'ssg_control');
+		wp_register_widget_control(__('Superb slideshow gallery', 'superb-slideshow-gallery'), array(__('Superb slideshow gallery', 'superb-slideshow-gallery'), 'widgets'), 'ssg_control');
 	} 
 }
 
@@ -256,8 +258,8 @@ function ssg_add_to_menu()
 {
 	if (is_admin()) 
 	{
-		add_options_page(__('Superb slideshow gallery', 'ssg'),
-							__('Superb slideshow gallery', 'ssg'),'manage_options',
+		add_options_page(__('Superb slideshow gallery', 'superb-slideshow-gallery'),
+							__('Superb slideshow gallery', 'superb-slideshow-gallery'),'manage_options',
 								'superb-slideshow-gallery','ssg_admin_option');  
 	}
 }
@@ -273,7 +275,7 @@ function ssg_add_javascript_files()
 
 function ssg_textdomain() 
 {
-	  load_plugin_textdomain( 'ssg', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
+	  load_plugin_textdomain( 'superb-slideshow-gallery', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
 }
 
 add_action('plugins_loaded', 'ssg_textdomain');

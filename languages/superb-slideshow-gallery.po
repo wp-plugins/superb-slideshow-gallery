@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Superb slideshow gallery\n"
-"POT-Creation-Date: 2014-08-03 11:11+0800\n"
-"PO-Revision-Date: 2014-08-03 11:11+0800\n"
+"POT-Creation-Date: 2015-11-16 23:06+0800\n"
+"PO-Revision-Date: 2015-11-16 23:06+0800\n"
 "Last-Translator: \n"
 "Language-Team: www.gopiplus.com <www.gopiplus.com>\n"
 "MIME-Version: 1.0\n"
@@ -13,39 +13,39 @@ msgstr ""
 "X-Poedit-Basepath: .\n"
 "X-Poedit-SearchPath-0: ..\n"
 
-#: ../superb-slideshow-gallery.php:81
+#: ../superb-slideshow-gallery.php:83
 msgid "No records available for the type"
 msgstr ""
 
-#: ../superb-slideshow-gallery.php:143
+#: ../superb-slideshow-gallery.php:145
 msgid "No records found, please check your short code"
 msgstr ""
 
-#: ../superb-slideshow-gallery.php:231 ../superb-slideshow-gallery.php:241
-#: ../superb-slideshow-gallery.php:246 ../superb-slideshow-gallery.php:259
-#: ../superb-slideshow-gallery.php:260 ../pages/image-management-add.php:91
-#: ../pages/image-management-edit.php:116
-#: ../pages/image-management-show.php:52 ../pages/image-setting.php:6
+#: ../superb-slideshow-gallery.php:233 ../superb-slideshow-gallery.php:243
+#: ../superb-slideshow-gallery.php:248 ../superb-slideshow-gallery.php:261
+#: ../superb-slideshow-gallery.php:262 ../pages/image-management-add.php:117
+#: ../pages/image-management-edit.php:143
+#: ../pages/image-management-show.php:53 ../pages/image-setting.php:6
 msgid "Superb slideshow gallery"
 msgstr ""
 
-#: ../superb-slideshow-gallery.php:233 ../pages/image-management-add.php:159
-#: ../pages/image-management-edit.php:193
-#: ../pages/image-management-show.php:127 ../pages/image-setting.php:130
+#: ../superb-slideshow-gallery.php:235 ../pages/image-management-add.php:186
+#: ../pages/image-management-edit.php:221
+#: ../pages/image-management-show.php:128 ../pages/image-setting.php:130
 msgid "Check official website for more information"
 msgstr ""
 
-#: ../superb-slideshow-gallery.php:234 ../pages/image-management-add.php:160
-#: ../pages/image-management-edit.php:194
-#: ../pages/image-management-show.php:128 ../pages/image-setting.php:131
+#: ../superb-slideshow-gallery.php:236 ../pages/image-management-add.php:187
+#: ../pages/image-management-edit.php:222
+#: ../pages/image-management-show.php:129 ../pages/image-setting.php:131
 msgid "click here"
 msgstr ""
 
-#: ../pages/image-management-add.php:28 ../pages/image-management-edit.php:56
+#: ../pages/image-management-add.php:28 ../pages/image-management-edit.php:57
 msgid "Please enter the image path."
 msgstr ""
 
-#: ../pages/image-management-add.php:35 ../pages/image-management-edit.php:63
+#: ../pages/image-management-add.php:35 ../pages/image-management-edit.php:64
 msgid "Please enter the target link."
 msgstr ""
 
@@ -53,160 +53,163 @@ msgstr ""
 msgid "New image details was successfully added."
 msgstr ""
 
-#: ../pages/image-management-add.php:83 ../pages/image-management-edit.php:108
+#: ../pages/image-management-add.php:83 ../pages/image-management-edit.php:109
 msgid "Click here"
 msgstr ""
 
-#: ../pages/image-management-add.php:83 ../pages/image-management-edit.php:108
+#: ../pages/image-management-add.php:83 ../pages/image-management-edit.php:109
 msgid "to view the details"
 msgstr ""
 
-#: ../pages/image-management-add.php:93
+#: ../pages/image-management-add.php:119
 msgid "Add new image details"
 msgstr ""
 
-#: ../pages/image-management-add.php:94
+#: ../pages/image-management-add.php:120
 msgid "Enter image path (URL)"
 msgstr ""
 
-#: ../pages/image-management-add.php:96 ../pages/image-management-edit.php:121
+#: ../pages/image-management-add.php:123
+#: ../pages/image-management-edit.php:149
 msgid "Where is the picture located on the internet"
 msgstr ""
 
-#: ../pages/image-management-add.php:97 ../pages/image-management-edit.php:122
+#: ../pages/image-management-add.php:124
+#: ../pages/image-management-edit.php:150
 msgid "Enter target link"
 msgstr ""
 
-#: ../pages/image-management-add.php:99 ../pages/image-management-edit.php:124
+#: ../pages/image-management-add.php:126
+#: ../pages/image-management-edit.php:152
 msgid "When someone clicks on the picture, where do you want to send them"
 msgstr ""
 
-#: ../pages/image-management-add.php:100
-#: ../pages/image-management-edit.php:125
+#: ../pages/image-management-add.php:127
+#: ../pages/image-management-edit.php:153
 msgid "Select target option"
 msgstr ""
 
-#: ../pages/image-management-add.php:107
-#: ../pages/image-management-edit.php:132
+#: ../pages/image-management-add.php:134
+#: ../pages/image-management-edit.php:160
 msgid "Do you want to open link in new window?"
 msgstr ""
 
-#: ../pages/image-management-add.php:108
-#: ../pages/image-management-edit.php:133
+#: ../pages/image-management-add.php:135
+#: ../pages/image-management-edit.php:161
 msgid "Enter image reference"
 msgstr ""
 
-#: ../pages/image-management-add.php:110
-#: ../pages/image-management-edit.php:135
+#: ../pages/image-management-add.php:137
+#: ../pages/image-management-edit.php:163
 msgid "Enter image reference. This is only for reference."
 msgstr ""
 
-#: ../pages/image-management-add.php:111
-#: ../pages/image-management-edit.php:136
+#: ../pages/image-management-add.php:138
+#: ../pages/image-management-edit.php:164
 msgid "Select gallery type/group"
 msgstr ""
 
-#: ../pages/image-management-add.php:138
-#: ../pages/image-management-edit.php:172
+#: ../pages/image-management-add.php:165
+#: ../pages/image-management-edit.php:200
 msgid "This is to group the images. Select your slideshow group."
 msgstr ""
 
-#: ../pages/image-management-add.php:139
-#: ../pages/image-management-edit.php:173
+#: ../pages/image-management-add.php:166
+#: ../pages/image-management-edit.php:201
 msgid "Display status"
 msgstr ""
 
-#: ../pages/image-management-add.php:144
-#: ../pages/image-management-edit.php:178
+#: ../pages/image-management-add.php:171
+#: ../pages/image-management-edit.php:206
 msgid "Do you want the picture to show in your galler?"
 msgstr ""
 
-#: ../pages/image-management-add.php:145
-#: ../pages/image-management-edit.php:179
+#: ../pages/image-management-add.php:172
+#: ../pages/image-management-edit.php:207
 msgid "Display order"
 msgstr ""
 
-#: ../pages/image-management-add.php:147
-#: ../pages/image-management-edit.php:181
+#: ../pages/image-management-add.php:174
+#: ../pages/image-management-edit.php:209
 msgid ""
 "What order should the picture be played in. should it come 1st, 2nd, 3rd, "
 "etc."
 msgstr ""
 
-#: ../pages/image-management-add.php:151
-#: ../pages/image-management-edit.php:185 ../pages/image-setting.php:122
+#: ../pages/image-management-add.php:178
+#: ../pages/image-management-edit.php:213 ../pages/image-setting.php:122
 msgid "Submit"
 msgstr ""
 
-#: ../pages/image-management-add.php:152
-#: ../pages/image-management-edit.php:186 ../pages/image-setting.php:123
+#: ../pages/image-management-add.php:179
+#: ../pages/image-management-edit.php:214 ../pages/image-setting.php:123
 msgid "Cancel"
 msgstr ""
 
-#: ../pages/image-management-add.php:153
-#: ../pages/image-management-edit.php:187
-#: ../pages/image-management-show.php:122 ../pages/image-setting.php:124
+#: ../pages/image-management-add.php:180
+#: ../pages/image-management-edit.php:215
+#: ../pages/image-management-show.php:123 ../pages/image-setting.php:124
 msgid "Help"
 msgstr ""
 
-#: ../pages/image-management-edit.php:17 ../pages/image-management-show.php:22
+#: ../pages/image-management-edit.php:18 ../pages/image-management-show.php:23
 msgid "Oops, selected details doesnt exist"
 msgstr ""
 
-#: ../pages/image-management-edit.php:91
+#: ../pages/image-management-edit.php:92
 msgid "Image details was successfully updated."
 msgstr ""
 
-#: ../pages/image-management-edit.php:118
+#: ../pages/image-management-edit.php:145
 msgid "Update image details"
 msgstr ""
 
-#: ../pages/image-management-edit.php:119
+#: ../pages/image-management-edit.php:146
 msgid "Enter image path"
 msgstr ""
 
-#: ../pages/image-management-show.php:40
+#: ../pages/image-management-show.php:41
 msgid "Selected record was successfully deleted."
 msgstr ""
 
-#: ../pages/image-management-show.php:52
-#: ../pages/image-management-show.php:120
+#: ../pages/image-management-show.php:53
+#: ../pages/image-management-show.php:121
 msgid "Add New"
 msgstr ""
 
-#: ../pages/image-management-show.php:65 ../pages/image-management-show.php:75
+#: ../pages/image-management-show.php:66 ../pages/image-management-show.php:76
 msgid "Type/Group"
 msgstr ""
 
-#: ../pages/image-management-show.php:66 ../pages/image-management-show.php:76
+#: ../pages/image-management-show.php:67 ../pages/image-management-show.php:77
 msgid "Reference"
 msgstr ""
 
-#: ../pages/image-management-show.php:67 ../pages/image-management-show.php:77
+#: ../pages/image-management-show.php:68 ../pages/image-management-show.php:78
 msgid "URL"
 msgstr ""
 
-#: ../pages/image-management-show.php:68 ../pages/image-management-show.php:78
+#: ../pages/image-management-show.php:69 ../pages/image-management-show.php:79
 msgid "Order"
 msgstr ""
 
-#: ../pages/image-management-show.php:69 ../pages/image-management-show.php:79
+#: ../pages/image-management-show.php:70 ../pages/image-management-show.php:80
 msgid "Display"
 msgstr ""
 
-#: ../pages/image-management-show.php:95
+#: ../pages/image-management-show.php:96
 msgid "Edit"
 msgstr ""
 
-#: ../pages/image-management-show.php:96
+#: ../pages/image-management-show.php:97
 msgid "Delete"
 msgstr ""
 
-#: ../pages/image-management-show.php:110
+#: ../pages/image-management-show.php:111
 msgid "No records available"
 msgstr ""
 
-#: ../pages/image-management-show.php:121 ../pages/image-setting.php:7
+#: ../pages/image-management-show.php:122 ../pages/image-setting.php:7
 msgid "Widget setting"
 msgstr ""
 

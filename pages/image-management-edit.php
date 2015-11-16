@@ -15,7 +15,7 @@ $result = $wpdb->get_var($sSql);
 
 if ($result != '1')
 {
-	?><div class="error fade"><p><strong><?php _e('Oops, selected details doesnt exist', 'ssg'); ?></strong></p></div><?php
+	?><div class="error fade"><p><strong><?php _e('Oops, selected details doesnt exist', 'superb-slideshow-gallery'); ?></strong></p></div><?php
 }
 else
 {
@@ -54,14 +54,14 @@ if (isset($_POST['ssg_form_submit']) && $_POST['ssg_form_submit'] == 'yes')
 	$form['ssg_path'] = isset($_POST['ssg_path']) ? $_POST['ssg_path'] : '';
 	if ($form['ssg_path'] == '')
 	{
-		$ssg_errors[] = __('Please enter the image path.', 'ssg');
+		$ssg_errors[] = __('Please enter the image path.', 'superb-slideshow-gallery');
 		$ssg_error_found = TRUE;
 	}
 
 	$form['ssg_link'] = isset($_POST['ssg_link']) ? $_POST['ssg_link'] : '';
 	if ($form['ssg_link'] == '')
 	{
-		$ssg_errors[] = __('Please enter the target link.', 'ssg');
+		$ssg_errors[] = __('Please enter the target link.', 'superb-slideshow-gallery');
 		$ssg_error_found = TRUE;
 	}
 	
@@ -89,7 +89,7 @@ if (isset($_POST['ssg_form_submit']) && $_POST['ssg_form_submit'] == 'yes')
 			);
 		$wpdb->query($sSql);
 		
-		$ssg_success = __('Image details was successfully updated.', 'ssg');
+		$ssg_success = __('Image details was successfully updated.', 'superb-slideshow-gallery');
 	}
 }
 
@@ -106,7 +106,7 @@ if ($ssg_error_found == FALSE && strlen($ssg_success) > 0)
 	?>
 	<div class="updated fade">
 		<p><strong><?php echo $ssg_success; ?> 
-		<a href="<?php echo WP_SSG_ADMIN_URL; ?>"><?php _e('Click here', 'ssg'); ?></a> <?php _e('to view the details', 'ssg'); ?></strong></p>
+		<a href="<?php echo WP_SSG_ADMIN_URL; ?>"><?php _e('Click here', 'superb-slideshow-gallery'); ?></a> <?php _e('to view the details', 'superb-slideshow-gallery'); ?></strong></p>
 	</div>
 	<?php
 }
@@ -140,28 +140,28 @@ wp_enqueue_media(); // This will enqueue the Media Uploader script
 ?>
 <div class="form-wrap">
 	<div id="icon-edit" class="icon32 icon32-posts-post"><br></div>
-	<h2><?php _e('Superb slideshow gallery', 'ssg'); ?></h2>
+	<h2><?php _e('Superb slideshow gallery', 'superb-slideshow-gallery'); ?></h2>
 	<form name="ssg_form" method="post" action="#" onsubmit="return ssg_submit()"  >
-      <h3><?php _e('Update image details', 'ssg'); ?></h3>
-      <label for="tag-image"><?php _e('Enter image path', 'ssg'); ?></label>
+      <h3><?php _e('Update image details', 'superb-slideshow-gallery'); ?></h3>
+      <label for="tag-image"><?php _e('Enter image path', 'superb-slideshow-gallery'); ?></label>
       <input name="ssg_path" type="text" id="ssg_path" value="<?php echo $form['ssg_path']; ?>" size="90" />
 	  <input type="button" name="upload-btn" id="upload-btn" class="button-secondary" value="Upload Image">
-      <p><?php _e('Where is the picture located on the internet', 'ssg'); ?></p>
-      <label for="tag-link"><?php _e('Enter target link', 'ssg'); ?></label>
+      <p><?php _e('Where is the picture located on the internet', 'superb-slideshow-gallery'); ?></p>
+      <label for="tag-link"><?php _e('Enter target link', 'superb-slideshow-gallery'); ?></label>
       <input name="ssg_link" type="text" id="ssg_link" value="<?php echo $form['ssg_link']; ?>" size="90" />
-      <p><?php _e('When someone clicks on the picture, where do you want to send them', 'ssg'); ?></p>
-      <label for="tag-target"><?php _e('Select target option', 'ssg'); ?></label>
+      <p><?php _e('When someone clicks on the picture, where do you want to send them', 'superb-slideshow-gallery'); ?></p>
+      <label for="tag-target"><?php _e('Select target option', 'superb-slideshow-gallery'); ?></label>
       <select name="ssg_target" id="ssg_target">
         <option value='_blank' <?php if($form['ssg_target']=='_blank') { echo 'selected' ; } ?>>_blank</option>
         <option value='_parent' <?php if($form['ssg_target']=='_parent') { echo 'selected' ; } ?>>_parent</option>
         <option value='_self' <?php if($form['ssg_target']=='_self') { echo 'selected' ; } ?>>_self</option>
         <option value='_new' <?php if($form['ssg_target']=='_new') { echo 'selected' ; } ?>>_new</option>
       </select>
-      <p><?php _e('Do you want to open link in new window?', 'ssg'); ?></p>
-      <label for="tag-title"><?php _e('Enter image reference', 'ssg'); ?></label>
+      <p><?php _e('Do you want to open link in new window?', 'superb-slideshow-gallery'); ?></p>
+      <label for="tag-title"><?php _e('Enter image reference', 'superb-slideshow-gallery'); ?></label>
       <input name="ssg_title" type="text" id="ssg_title" value="<?php echo $form['ssg_title']; ?>" size="90" />
-      <p><?php _e('Enter image reference. This is only for reference.', 'ssg'); ?></p>
-      <label for="tag-select-gallery-group"><?php _e('Select gallery type/group', 'ssg'); ?></label>
+      <p><?php _e('Enter image reference. This is only for reference.', 'superb-slideshow-gallery'); ?></p>
+      <label for="tag-select-gallery-group"><?php _e('Select gallery type/group', 'superb-slideshow-gallery'); ?></label>
 	  <select name="ssg_type" id="ssg_type">
 		<?php
 		$sSql = "SELECT distinct(ssg_type) as ssg_type FROM `".WP_ssg_TABLE."` order by ssg_type, ssg_order";
@@ -197,28 +197,28 @@ wp_enqueue_media(); // This will enqueue the Media Uploader script
 		}
 		?>
 		</select>
-      <p><?php _e('This is to group the images. Select your slideshow group.', 'ssg'); ?></p>
-      <label for="tag-display-status"><?php _e('Display status', 'ssg'); ?></label>
+      <p><?php _e('This is to group the images. Select your slideshow group.', 'superb-slideshow-gallery'); ?></p>
+      <label for="tag-display-status"><?php _e('Display status', 'superb-slideshow-gallery'); ?></label>
       <select name="ssg_status" id="ssg_status">
         <option value='YES' <?php if($form['ssg_status']=='YES') { echo 'selected' ; } ?>>Yes</option>
         <option value='NO' <?php if($form['ssg_status']=='NO') { echo 'selected' ; } ?>>No</option>
       </select>
-      <p><?php _e('Do you want the picture to show in your galler?', 'ssg'); ?></p>
-      <label for="tag-display-order"><?php _e('Display order', 'ssg'); ?></label>
+      <p><?php _e('Do you want the picture to show in your galler?', 'superb-slideshow-gallery'); ?></p>
+      <label for="tag-display-order"><?php _e('Display order', 'superb-slideshow-gallery'); ?></label>
       <input name="ssg_order" type="text" id="ssg_order" size="10" value="<?php echo $form['ssg_order']; ?>" maxlength="3" />
-      <p><?php _e('What order should the picture be played in. should it come 1st, 2nd, 3rd, etc.', 'ssg'); ?></p>
+      <p><?php _e('What order should the picture be played in. should it come 1st, 2nd, 3rd, etc.', 'superb-slideshow-gallery'); ?></p>
       <input name="ssg_id" id="ssg_id" type="hidden" value="">
       <input type="hidden" name="ssg_form_submit" value="yes"/>
       <p class="submit">
-        <input name="publish" lang="publish" class="button-primary" value="<?php _e('Submit', 'ssg'); ?>" type="submit" />
-        <input name="publish" lang="publish" class="button-primary" onclick="ssg_redirect()" value="<?php _e('Cancel', 'ssg'); ?>" type="button" />
-        <input name="Help" lang="publish" class="button-primary" onclick="ssg_help()" value="<?php _e('Help', 'ssg'); ?>" type="button" />
+        <input name="publish" lang="publish" class="button-primary" value="<?php _e('Submit', 'superb-slideshow-gallery'); ?>" type="submit" />
+        <input name="publish" lang="publish" class="button-primary" onclick="ssg_redirect()" value="<?php _e('Cancel', 'superb-slideshow-gallery'); ?>" type="button" />
+        <input name="Help" lang="publish" class="button-primary" onclick="ssg_help()" value="<?php _e('Help', 'superb-slideshow-gallery'); ?>" type="button" />
       </p>
 	  <?php wp_nonce_field('ssg_form_edit'); ?>
     </form>
 </div>
 <p class="description">
-	<?php _e('Check official website for more information', 'ssg'); ?>
-	<a target="_blank" href="<?php echo WP_SSG_FAV; ?>"><?php _e('click here', 'ssg'); ?></a>
+	<?php _e('Check official website for more information', 'superb-slideshow-gallery'); ?>
+	<a target="_blank" href="<?php echo WP_SSG_FAV; ?>"><?php _e('click here', 'superb-slideshow-gallery'); ?></a>
 </p>
 </div>
